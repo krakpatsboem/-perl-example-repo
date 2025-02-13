@@ -1,0 +1,10 @@
+sub is_prime {
+    my $num = shift;
+    return 0 if $num < 2;
+    for my $i (2 .. sqrt($num)) {
+        return 0 if $num % $i == 0;
+    }
+    return 1;
+}
+
+print is_prime(7) ? "Prime\n" : "Not Prime\n";
